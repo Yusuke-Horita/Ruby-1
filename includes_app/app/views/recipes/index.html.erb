@@ -1,0 +1,8 @@
+<h1>Recipes#index</h1>
+<p>Find me in app/views/recipes/index.html.erb</p>
+
+<% @recipes.each do |recipe| %>
+  <%= recipe.name %>
+  <small><%= recipe.user.email %></small>
+  <br>
+<% end %>
