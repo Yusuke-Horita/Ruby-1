@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def search
+    require 'net/http'
     if postal_code = params[:postal_code]
       params = URI.encode_www_form({zipcode: postal_code})
       uri = URI.parse("http://zipcloud.ibsnet.co.jp/api/search?#{params}")
